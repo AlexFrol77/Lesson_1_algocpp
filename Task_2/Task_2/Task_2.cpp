@@ -9,7 +9,7 @@ int Find_X_Count(int *arr, int size, int find_x) {
 	while (flag) {
 		medium = ((start + finish) / 2);
 		if (find_x < arr[medium]) {
-			finish = medium;
+			finish = medium - 1;
 		}
 		if (find_x >= arr[medium]) {
 			start = medium + 1;
