@@ -13,12 +13,12 @@ int Find_X_Count(int *arr, int size, int find_x) {
 		}
 		if (find_x >= arr[medium]) {
 			start = medium + 1;
-		}
-		if (find_x >= arr[finish]) {
-			flag = false;
-			medium = size;
-		}
-		else if ((arr[medium - 1] <= find_x) && (find_x < arr[medium])) {
+			if (find_x >= arr[finish]) {
+				flag = false;
+				medium = size;
+			}
+		}	
+		if ((arr[medium - 1] <= find_x) && (find_x < arr[medium])) {
 			flag = false;
 		}
 	}
